@@ -382,10 +382,10 @@ class CircleChanger(object):
         #   NO CREDIT if you use the distance formula here.
         ################################################################
 
-        self.circle.center = self.circle.center.halfway_to(other_circle_changer.circle.center)
-        self.circle.radius = 0.5 * self.circle.center.get_distance_from(other_circle_changer.circle.center)
-        self.circle.fill_color = 'red'
-        self.colors = self.colors + other_circle_changer.colors
+        # self.circle.center = self.circle.center.halfway_to(other_circle_changer.circle.center)
+        # self.circle.radius = 0.5 * self.circle.center.get_distance_from(other_circle_changer.circle.center)
+        # self.circle.fill_color = 'red'
+        # self.colors = self.colors + other_circle_changer.colors
 
     def change_color(self, index_of_color):
         """
@@ -407,11 +407,13 @@ class CircleChanger(object):
             :type index_of_color: int
         """
         ################################################################
-        # TODO: 7.
+        # Done: 7.
         #   First, READ the doc-string (specification) above.
         #   Second, READ the   run_test_change_color   function (below).
         #   Third, implement and test this method.
         ################################################################
+
+        self.circle.fill_color = self.colors[index_of_color]
 
     def change_to_original_color(self):
         """
